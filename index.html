@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javscript Modal Dialog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lightbox practice</h1>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, repellendus. Quo nihil veniam aspernatur tenetur earum placeat magni vero, nam libero reprehenderit voluptatibus quos ipsum, nobis dolores molestiae obcaecati explicabo.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut delectus incidunt magnam soluta doloribus esse eum debitis repellat distinctio quasi aliquid ad voluptatem ducimus, in, tempora nulla rem repellendus ea!
+    </p>
+
+    <button onclick="showDialog()"> Contact Me </button>
+
+    <!--Dialog-->
+    <div id="overlay" onClick="hideDialog()">
+        <div class="dialog">
+            <h2>Contact Me? <span onClick="hideDialog()">&times;</span></h2>
+
+            <form action="#">
+                <input type="text" placeholder="Your email">
+                <textarea placeholder="Your message"></textarea>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showDialog(){
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("dialog").style.display = "block"
+        }
+
+        function hideDialog(){
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("dialog").style.display = "none"
+        }
+    </script>
+</body>
+</html>
